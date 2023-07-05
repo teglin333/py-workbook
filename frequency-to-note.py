@@ -20,19 +20,17 @@ def getFrequency(note, octave):
 
 def getNote(frequency):
     # determine the lowest octave
-    floor_c = min_octave
+    floor_b = min_octave
     for i in range(min_octave, max_octave):
-        floor_frequency = getFrequency('B', i)
-        if (floor_frequency <= frequency): 
-            floor_c += 1
+        if (getFrequency('B', i)) <= frequency: 
+            floor_b += 1
         else:
-            break
-        
+            break       
     # start iterating at the lowest octave
-    for j in range(floor_c, max_octave + 1):
+    for j in range(floor_b, max_octave + 1):
         # for each note in the octave
         for x in middle_note_frequencies.keys():
-            # is the user frequence close to the note frequency?
+            # is the user frequency close to the note frequency?
             if abs(getFrequency(x, j) - frequency) <= 1:
                 return (x + str(j))
     return None
