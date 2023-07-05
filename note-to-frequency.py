@@ -1,7 +1,7 @@
-max_octave = 8
 min_octave = 0
+max_octave = 8
 
-note_frequencies = {
+middle_note_frequencies = {
     'C' : 261.63,
     'D' : 293.66,
     'E' : 329.63,
@@ -12,14 +12,14 @@ note_frequencies = {
 }
 
 def getFrequency(note, octave):
-    middle_frequency = note_frequencies[note]
+    middle_frequency = middle_note_frequencies[note]
     return middle_frequency / (2 ** (4 - octave))
 
 while True:
     try:
         input_string = input('Enter a note (A-G) and octave (0-8): ').upper()
         note = input_string[0]; octave = int(input_string[1])
-        if (len(input_string) == 2 and note in note_frequencies.keys()):
+        if (len(input_string) == 2 and note in middle_note_frequencies.keys()):
             if (octave >= min_octave and octave <= max_octave):
                 print('The note %s has a frequency of %.2f.' % 
                       (input_string, getFrequency(note, octave)))
