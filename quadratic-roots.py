@@ -11,10 +11,8 @@ def computeRoots(a, b, c):
                     (-b - math.sqrt(discriminant)) / (2 * a)]
         elif discriminant == 0:
             return [(-b / (2 * a))]
-        else:
-            return []  # no real roots
     else:
-        raise ValueError("Constant a must be nonzero.")
+        return []  # no real roots
             
 while True:
     try:
