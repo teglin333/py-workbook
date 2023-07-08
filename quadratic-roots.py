@@ -26,7 +26,8 @@ while True:
                 if len(roots) == 2:
                     print('The real roots of the quadratic function with',
                           'constants %.2f, %.2f, and %.2f are' %
-                          (tuple(constants.values())), '%.2f and %.2f.' % tuple(roots))
+                          (tuple(constants.values())), '%.2f and %.2f.'
+                          % tuple(roots))
                     break
                 elif len(roots) == 1:
                     print('The real root of the quadratic function with',
@@ -34,9 +35,8 @@ while True:
                           (tuple(constants.values())), '%.2f.' % tuple(roots))
                     break
             else:
-                print('A quadratic function with with',
-                      'constants %.2f, %.2f, and %.2f' % (tuple(constants.values())),
-                      'has no real roots.')
+                print('A quadratic function with constants %.2f, %.2f, and %.2f' 
+                      % (tuple(constants.values())), 'has no real roots.')
                 break
         else:
             raise ValueError("Constant a must be nonzero.")
