@@ -3,7 +3,10 @@
 
 import math
 
-def computeRoots(a, b, c):
+def computeRoots(*, a: float, b: float, c: float) -> float:
+    """
+    Calculate the real roots of a quadratic function.
+    """
     if (a != 0):
         discriminant = (b ** 2) - (4 * a * c)
         if discriminant > 0:
