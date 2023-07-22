@@ -65,7 +65,7 @@ def rtd(**keywords: float) -> Rtd_Dict:
         elif time is None and distance is not None and rate is not None:
             time = distance / rate
         else:
-            raise warnings.warn("Not enough information to solve for distance, rate, and time.")
+            warnings.warn("Not enough information to solve for distance, rate, and time.")
     result: Rtd_Dict = {
         'distance': distance, 
         'rate': rate, 
