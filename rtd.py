@@ -67,8 +67,8 @@ def rtd(**keywords: float) -> Rtd_Dict:
         else:
             warnings.warn("Not enough information to solve for distance, rate, and time.")
     result: Rtd_Dict = {
-        'distance': distance, 
-        'rate': rate, 
-        'time': time
+        "distance": distance, 
+        "rate": rate, 
+        "time": time
         }
     return result
