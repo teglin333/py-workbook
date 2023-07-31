@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # gcd.py
 
-def checkvalues(func):
+def validate(func):
     def wrapper(*args):
         for arg in args:
             if arg < 1:
@@ -10,7 +10,7 @@ def checkvalues(func):
     return wrapper
 
 
-@checkvalues
+@validate
 def gcd(m: int, n: int, /) -> int:
     """
     Find the greatest common denominator (GCD), given two integers.
