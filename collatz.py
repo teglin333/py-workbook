@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 from uniplot import plot
 
-
+ 
 def collatz_iterate(integer: int) -> int:
     """
     Given an integer n, iterate through the collatz function until f(n) is 1.
